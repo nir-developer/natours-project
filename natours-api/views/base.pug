@@ -1,0 +1,85 @@
+doctype html
+html(lang="en")
+  block head
+    //-RESPONSIVE - META
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Natours | #{title} 
+    //- URL FOR ALL  STATIC ASSETS MUST BE A RELATIVE PATH - TO THE HOSTNAME (127.0.0.1) JUST LIKE THE TOUR DETAILS LINK
+    link(rel='stylesheet' href='/css/style.css')
+
+    //- LEAFLET - LATER 
+    link(rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="")
+    link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+    link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
+    script(src='/js/bundle.js'  defer)
+    //- script(src='/js/index.js' defer)
+
+
+
+  body 
+    // HEADER
+    include _header
+
+    //-CONTENT
+    block content
+      h1 This is a place holder heading
+
+    //-FOOTER
+    include _footer
+
+    //- EXPOSE THE AXIOS OBJECT TO THE GLOBAL SCOPE -TO BE USED IN THE LOGIN FUNCTION
+    //- script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')
+
+
+    //- IMPORT THE - BUNDLE  OUT FILE:  public/js/bundle.js !! NOT the public/js/index.js !!
+    //- script(src='/js/bundle.js')
+    //- COMMENTED OUT IN LECTURE 191-ADDING PARCEL 1 (LIKE HIM - NOT PARCEL 2) 
+    //- NOT A GOOD PRACTICE TO IMPORT STATIC SCRIPTS TO POLUTE THE GLOBAL SCOPE! 
+    //- ---------------------------------------------------
+    //- script(src='/js/leaflet.js', type='module')
+    //- script(src='/js/leaflet.js')
+    //- script(src='/js/login.js')
+
+
+
+
+
+
+//- <div class="footer">
+//-       <div class="footer__logo">
+//-         <img src="img/logo-green.png" alt="Natours logo" />
+//-       </div>
+//-       <ul class="footer__nav">
+//-         <li><a href="#">About us</a></li>
+//-         <li><a href="#">Download apps</a></li>
+//-         <li><a href="#">Become a guide</a></li>
+//-         <li><a href="#">Careers</a></li>
+//-         <li><a href="#">Contact</a></li>
+//-       </ul>
+//-       <p class="footer__copyright">
+//-         &copy; by Jonas Schmedtmann. All rights reserved.
+//-       </p>
+//-     </div>
+
+
+
+
+//- <header class="header">
+//-       <nav class="nav nav--tours">
+//-         <a href="#" class="nav__el">All tours</a>
+//-       </nav>
+//-       <div class="header__logo">
+//-         <img src="img/logo-white.png" alt="Natours logo" />
+//-       </div>
+//-       <nav class="nav nav--user">
+//-         <a href="#" class="nav__el">My bookings</a>
+//-         <a href="#" class="nav__el">
+//-           <img src="img/user.jpg" alt="User photo" class="nav__user-img" />
+//-           <span>Jonas</span>
+//-         </a>
+
+//-         <!-- <button class="nav__el">Log in</button>
+//-                 <button class="nav__el nav__el--cta">Sign up</button> -->
+//-       </nav>
+//-     </header>

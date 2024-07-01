@@ -1,0 +1,230 @@
+/*JONAS FORKIFY:
+// $color-primary: #f59a83;
+$color-primary: #f38e82;
+$color-grad-1: #fbdb89;
+$color-grad-2: #f48982;
+
+$color-grey-light-1: #f9f5f3; // Light background
+$color-grey-light-2: #f2efee; // Light lines
+$color-grey-light-3: #d3c7c3; // Light text (placeholder)
+$color-grey-dark-1: #615551; // Normal text
+$color-grey-dark-2: #918581; // Lighter text
+
+$gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
+
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+*/
+
+
+
+:root {
+  --text-color: #333333; /* Dark Gray for Text */
+  --background-color: #f0f0f0; /* Light Gray for Background */
+  --primary-color: #007bff; /* Primary Color */
+  --secondary-color: #6c757d; /* Secondary Color */
+
+  /*#4CAF50*/
+}
+
+
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*BASIC STYLES FOR THE PAGE*/
+body{
+    font-size:1.6rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+/*GENERAL BUTTON 
+- OVERRIDE LATER THE LOGIN , LOGOUT , AND SIGNUP BUTTONS!!SINCE HAVE THE SAME B.G AS THE HEADER PARENT*/
+button{
+    padding:1rem 2rem;
+    background-color: #4CAF50;
+    color:white;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button:hover{
+    background-color: #45a049;
+}
+
+
+/*HEADER BLOCK*/
+.header{
+    background-color: #4CAF50;
+    color:#fff;
+    display: flex;
+
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding:1rem;
+
+}
+
+/*CHECK IF DISTORTED!*/
+.header__img{
+    height:5rem;
+    width:5rem;
+}
+
+.header__user{
+    display: flex;
+    align-items: center;
+
+}
+
+.header__user-photo, .header__user-name{
+    margin-right: 1rem;;
+}
+
+
+.header__user-photo{
+    width:4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+}
+
+
+
+/*LET IT GROW VERTICALL(SINCE PARENT IS A FLEX COLUMN CONTAINER THE BODY*/
+.main{
+    /* display: flex; */
+    flex:1;
+
+    /*HIDDEN BY DEFAULT*/
+    display: none;
+}
+
+
+/*2) SIDEBAR(aside) 
+- WITH THE TASKS LIST
+*/
+.main__sidebar{
+    flex:1;
+    padding:2rem;
+    
+}
+
+
+.main__task-list{
+    background-color: blue;
+    list-style: none;
+
+}
+
+/*ONLY MARGIN BUTTOM*/
+.main__task-item{
+   
+    background-color:white;
+    padding:1rem; 
+    margin-bottom: 1rem;
+    border:1px solid #ddd;
+    cursor: pointer;
+ 
+    
+}
+
+
+
+/*3) MAIN DETAILS(same padding 2rem as the main__sidebar(2)-list(2)*/
+.main__section{
+    
+    flex:3;
+    
+    padding:2rem;
+}
+
+
+
+/*MODAL*/
+.modal{
+
+    /*HIDDEN BY DEFAULT!*/
+    display: none;
+    background-color: rgb(0, 0, 0); /*FALL BACK*/
+    background-color: rgba(0, 0 , 0, 0.4);
+
+    position:fixed;
+    z-index: 1;
+    top:0; 
+    left:0;
+    width:100%;
+    height: 100%;
+}
+
+
+
+.modal__content{
+    background-color: white;;
+
+    width:80%;
+    margin:15% auto; 
+
+}
+
+
+
+.modal__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__form{
+
+    padding:2rem;
+
+}
+
+.modal__form h2{
+    margin-bottom: 2rem;;
+}
+
+.modal__form label{
+    margin-bottom: 0.5rem;;
+}
+
+.modal__form-input{
+    
+    width:100%;
+    padding:0.8rem;
+    border:solid 1px #6c757d;
+    border-radius: 4px;;
+    
+    margin-bottom: 1rem;
+
+}
+
+
+
+.modal__form button{
+    margin-top:1rem;
+}
+
+.modal__form p{
+    text-align: center;
+}
+
+
+
